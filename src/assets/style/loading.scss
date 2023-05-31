@@ -1,0 +1,58 @@
+@import "./variable";
+@import "./mixins";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.loading {
+    width: 100%;
+    height: 100vh;
+    @include d-flex(center, flex-end, column, unset);
+    background-color: #ffffff;
+
+    &_logo {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 20px;
+    }
+    &_circle {
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+      }
+      
+      #loading-spinner {
+        width: 45px;
+        height: 45px;
+        position: relative;
+        border: 3px solid #ffffff;
+        border-radius: 50%;
+        border-top-color: #000000;
+        animation: spin 1s linear infinite;
+      }
+      
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+    &_flex {
+        width: 100%;
+        height: 50vh;
+        @include d-flex(center, flex-end, column, unset);
+        .loading_author {
+            font-family: var(--main-font);
+            font-weight: 600;
+            font-size: 20px;
+            color: #000000;
+        }
+        .loading_text {
+            font-family: var(--main-font);
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #000;
+        }   
+    }
+}

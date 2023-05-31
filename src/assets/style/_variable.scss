@@ -1,0 +1,19 @@
+:root {
+    --main-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --black-color: #000000;
+    --white250-color: rgb(250, 250, 250);
+    --blue-color: #0095f6;
+    --blue-hover: rgb(0, 60, 170);
+    --gray-text: #8e8e8e;
+    --white-color: #ffffff;
+    --milk-color: #fafafa;
+    --border-color: #dbdbdb;
+    [data-theme='dark'] {
+        --black-color: #ffffff;
+        --white250-color: rgb(18, 18, 18);
+        --gray-text: #a8a8a8;
+        --white-color: #000000;
+        --milk-color: #121212;
+        --border-color: #232323;
+    }
+}

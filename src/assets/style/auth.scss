@@ -1,0 +1,77 @@
+@import "./variable";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fafafa;
+}
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    margin-top: 15px;
+    
+    .login__box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        width: 25%;
+        height: 100%;
+        border: 1px solid #dcdcdc;
+        background-color: var(--bg-color);
+        .login__logo {
+            width: 65%;
+        }
+        .login__form {
+            width: 100%;
+
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                .login__input, .login__submit {
+                    width: 80%;
+                    padding: 7px;
+                }
+                .login__input {
+                    margin-bottom: 10px;
+                    background-color: #fafafa;
+                    border: 1px solid #dddddd;
+                }
+                .login__input::placeholder {
+                    color: #8e8e8e;
+                }
+                .login__submit {
+                    border: none;
+                    background-color: #b2dffc;
+                    color: #ffffff;
+                    border-radius: 3px;
+                }
+                .login__submit.active {
+                    background-color: #0095f6;
+                }
+                .login__pass {
+                    position: absolute;
+                    font-family: var(--main-font);
+                    font-weight: 500;
+                    font-size: 14px;
+                    right: 45px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .login__or-btn {
+            color: #8e8e8e;
+            font-family: var(--main-font);
+        }
+    }
+}
+
