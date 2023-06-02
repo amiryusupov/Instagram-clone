@@ -162,7 +162,7 @@
     .sidebar__right {
         width: 30%;
         height: 30vh;
-        margin-top: 15px;
+        margin-top: 45px;
         &-box {
             @include d-flex(flex-start, flex-start, column, unset);
             width: 100%;
@@ -252,6 +252,33 @@
                 color: var(--gray-text);
                 margin-top: 25px;
             }
+        }
+    }
+    // Story
+    .story {
+        width: 55%;
+        padding: 1rem 3rem 0 8rem;
+        .swiper {
+            width: 100%;
+                .swiper-button-next,
+                .swiper-button-prev {
+                color: #fff;
+                background-color: #000;
+                /* Add any other desired styles */
+                }
+                &_slide {
+                    @include d-flex(center, center, column, unset);
+                    .swiper_img {
+                        width: 55px;
+                        height: 55px;
+                        border-radius: 50%;
+                }
+                .swiper_name {
+                    font-size: 14px;
+                    font-family: var(--main-font);
+                    margin-top: 2px;
+                }
+            }   
         }
     }
 }
