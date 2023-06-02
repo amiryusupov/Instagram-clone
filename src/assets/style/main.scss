@@ -12,7 +12,9 @@
 .main {
     width: 100%;
     @include d-flex(flex-start, space-between, row, unset);
-    
+    @media screen and (max-width: 1160px) {
+        justify-content: unset;
+    }
     // Sidebar left
     .sidebar__left {
         width: 250px;
@@ -20,16 +22,24 @@
         border-right: 1px solid var(--border-color);
         background-color: var(--white-color);
         @media screen and (max-width: 1260px) {
-            width: 100px;
+            width: 70px;
         }
         &-box {
             height: 100%;
             @include d-flex(center, space-around, column, unset);
+            @media screen and (max-width: 1260px) {
+                width: 70px;
+            }
             a {
                 @include d-flex(center, center, unset, unset);
                 flex: 1 1 auto;
                 width: 80%;
                 outline: none;
+                @media screen and (max-width: 1260px) {
+                    justify-content: flex-start;
+                    padding: 10px;
+                    width: 72%;
+                }
                 .sidebar__left-iconlogo {
                     display: none;
                     @media screen and (max-width: 1260px) {
@@ -51,6 +61,9 @@
                 width: 80%;
                 flex: 2 1 auto;
                 padding-top: 20px;
+                @media screen and (max-width: 1260px) {
+                    width: 70%;
+                }
                 &-flex {
                     height: 100%;
                     padding-bottom: 30px;
@@ -66,6 +79,7 @@
                             margin-bottom: 20px;
                             padding-top: 10px;
                             padding: 10px;
+                            width: 64%;
                             border: 1px solid transparent;
                         }
                         &:hover {
@@ -114,6 +128,9 @@
             .sidebar__left-footer {
                 width: 80%;
                 margin-bottom: 20px;
+                @media screen and (max-width: 1260px) {
+                    width: 45%;
+                }
                 .sidebar__left-footer-row {
                     flex: 1 1 auto;
                     @include d-flex(center, flex-start, row, unset);
@@ -123,11 +140,8 @@
                     transition: all 0.3s;
                     @media screen and (max-width: 1260px) {
                         padding: 0;
-                    }
-                    svg {
-                        [data-theme='dark'] {
-                            color: white;
-                        }
+                        width: 100%;
+                        justify-content: center;
                     }
                     &:hover {
                         border-radius: 30px;
@@ -163,6 +177,9 @@
         width: 30%;
         height: 30vh;
         margin-top: 45px;
+        @media screen and (max-width: 1160px) {
+            display: none;
+        }
         &-box {
             @include d-flex(flex-start, flex-start, column, unset);
             width: 100%;
@@ -257,14 +274,19 @@
     // Story
     .story {
         width: 55%;
-        padding: 1rem 3rem 0 8rem;
+        max-width: 630px;
+        padding-top: 1rem;
+        @include d-flex(center, center, row, unset);
+        @media screen and (max-width: 1160px) {
+            flex: 1 1 auto;
+            max-width: 1000px;
+        }
         .swiper {
             width: 100%;
                 .swiper-button-next,
                 .swiper-button-prev {
                 color: #fff;
                 background-color: #000;
-                /* Add any other desired styles */
                 }
                 &_slide {
                     @include d-flex(center, center, column, unset);
@@ -272,6 +294,7 @@
                         width: 55px;
                         height: 55px;
                         border-radius: 50%;
+                        object-fit: cover;
                 }
                 .swiper_name {
                     font-size: 14px;

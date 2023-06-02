@@ -7,7 +7,6 @@ function NavbarSlider({slides}) {
   return (
     <Swiper
     modules={[Navigation]}
-        grabCursor={true}   
         slidesPerView={8}
         spaceBetween={20}
         navigation={true}
