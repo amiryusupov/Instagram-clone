@@ -1,35 +1,8 @@
 import React from 'react'
 import example_img from "../../assets/img/img_example.jpg"
 import { Link } from 'react-router-dom'
-
+import users from '../../helpers/json/users.json'
 function SidebarRight() {
-  const data = [
-    {
-      id: 1,
-      nick: "amir",
-      name: "amir",
-    },
-    {
-      id: 2,
-      nick: "amir",
-      name: "amir",
-    },
-    {
-      id: 3,
-      nick: "amir",
-      name: "amir",
-    },
-    {
-      id: 4,
-      nick: "amir",
-      name: "amir",
-    },
-    {
-      id: 5,
-      nick: "amir",
-      name: "amir",
-    },
-  ]
   return (
     <div className="sidebar__right">
       <div className="sidebar__right-box">
@@ -43,7 +16,7 @@ function SidebarRight() {
         <div className="sidebar__right-section">
           <span className="sidebar__right-text">Suggestions For You</span>
           <div className="sidebar__right-users">
-            {data.map(item => {
+            {users.map(item => {
               return (
                 <div className="sidebar__right-item" key={item.id}>
                   <Link to={`/${item.nick}`}>
@@ -60,7 +33,7 @@ function SidebarRight() {
           </div>
         </div> 
         <span className="sidebar__right-footer">
-        © 2023 INSTAGRAM FROM AMIR
+        &copy; 2023 INSTAGRAM FROM AMIR
         </span>
       </div>
     </div>

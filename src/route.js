@@ -1,5 +1,5 @@
 import { lazy } from "react";
-const Main = lazy(()=> import("./components/Home/Main"));
+const Main = lazy(()=> import("./pages/HomePage"));
 
 let routes = [
     {

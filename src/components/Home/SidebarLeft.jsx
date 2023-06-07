@@ -8,7 +8,11 @@ function SidebarLeft() {
   return (
     <div className="sidebar__left">
       <div className="sidebar__left-box">
-        <Link to="/"><icons.BsInstagram className="sidebar__left-iconlogo" size="42px"/><img src={instagram_logo} className="sidebar__left-logo" alt="instagram_logo" /></Link>
+        <div className="sidebar__left-link">
+          <Link to="/"><icons.BsInstagram className="sidebar__left-iconlogo" size="42px"/>
+            <img src={instagram_logo} className="sidebar__left-logo" alt="instagram_logo" />
+          </Link>
+        </div>
         <div className="sidebar__left-section">
           <div className="sidebar__left-section-flex">
             {
